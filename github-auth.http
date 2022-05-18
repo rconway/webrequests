@@ -1,0 +1,17 @@
+
+# Request delegated access
+# Follow the redirect `Location` (using browser) to obtain the code grant.
+GET https://github.com/login/oauth/authorize?client_id=6e33c9212621230df631 HTTP/1.1
+
+###
+
+# Paste the code grant from the above redirect into the `code` field below
+POST https://github.com/login/oauth/access_token HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "client_id": "6e33c9212621230df631",
+  "client_secret": "191ac57355b2ad74610bb027f7c18e79523b3896",
+  "code": "6603725c9f6c99bbcc1b"
+}
